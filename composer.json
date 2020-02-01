@@ -1,0 +1,28 @@
+{
+    "name": "kilbiller/react-php",
+    "description": "Generate static markup the react way",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rémy Peru",
+            "email": "peru.remy@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "React\\": "src/"
+        },
+        "files": ["src/helpers.php"]
+    },
+    "require": {},
+    "require-dev": {
+        "kahlan/kahlan": "^4.7",
+        "squizlabs/php_codesniffer": "^3.5"
+    },
+    "scripts": {
+        "fmt": "phpcbf --standard=PSR12 src tests",
+        "lint": "phpcs --standard=PSR12 -s src tests",
+        "test": "kahlan --spec=tests --grep='*.php'"
+    }
+}
